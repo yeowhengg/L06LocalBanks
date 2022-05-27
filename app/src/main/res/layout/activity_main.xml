@@ -12,26 +12,29 @@
         android:id="@+id/tvDBS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dbs"
+        android:text="@string/eng_dbs"
         android:layout_weight="33.3"
         android:gravity="center"
+        android:textColor="@color/black"
         />
 
     <TextView
         android:id="@+id/tvOCBC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ocbc"
+        android:text="@string/eng_ocbc"
         android:layout_weight="33.3"
         android:gravity="center"
+        android:textColor="@color/black"
         />
 
     <TextView
         android:id="@+id/tvUOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/uob"
+        android:text="@string/eng_uob"
         android:layout_weight="33.3"
         android:gravity="center"
+        android:textColor="@color/black"
         />
 </LinearLayout>

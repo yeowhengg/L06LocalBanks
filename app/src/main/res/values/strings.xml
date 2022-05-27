@@ -1,10 +1,20 @@
 <resources>
-    <string name="app_name">My Local Banks</string>
-    <string name="dbs">DBS</string>
-    <string name="ocbc">OCBC</string>
-    <string name="uob">UOB</string>
-    <string name="english">English</string>
-    <string name="chinese">Chinese</string>
-    <string name="website">Website</string>
-    <string name="contact_the_bank">Contact the bank</string>
+    <string name = "app_name">My Local Banks</string>
+    <string name = "eng_dbs">DBS</string>
+    <string name = "eng_ocbc">OCBC</string>
+    <string name = "eng_uob">UOB</string>
+    <string name = "english_option">English</string>
+    <string name = "chinese_option">中文</string>
+    <string name = "website">Website</string>
+    <string name = "contact_the_bank">Contact the bank</string>
+    <string name = "chi_dbs">星展银行</string>
+    <string name = "chi_ocbc">华侨银行</string>
+    <string name = "chi_uob">大华银行</string>
+    <string name = "dbs_phone">18001111111</string>
+    <string name = "ocbc_phone">18003633333</string>
+    <string name = "uob_phone">18002222121</string>
+    <string name = "chi_web">网站</string>
+    <string name = "chi_contact">联系银行</string>
+    <string name = "eng_fav">Favorite</string>
+    <string name = "chi_fav">爱</string>
 </resources>
