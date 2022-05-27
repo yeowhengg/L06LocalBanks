@@ -9,25 +9,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class ChangeLangActivity extends AppCompatActivity {
 
     TextView getDBSTV;
     TextView getOCBCTV;
     TextView getUOBTV;
-    String getTVValue;
+
+    String langDBS;
+    String langOCBC;
+    String langUOB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_change_lang);
 
         getDBSTV = findViewById(R.id.tvDBS);
         getOCBCTV = findViewById(R.id.tvOCBC);
         getUOBTV = findViewById(R.id.tvUOB);
+
+        Intent getValues = getIntent();
+        langDBS = getValues.getStringExtra("dbslang");
+        langOCBC = getValues.getStringExtra("ocbclang");
+        langUOB = getValues.getStringExtra("uoblang");
+
+        getDBSTV.setText(langDBS);
+        getOCBCTV.setText(langOCBC);
+        getUOBTV.setText(langUOB);
 
         registerForContextMenu(getDBSTV);
         registerForContextMenu(getOCBCTV);
@@ -51,23 +60,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        if(id == R.id.chiLang){
-            Intent changeLang = new Intent(MainActivity.this, ChangeLangActivity.class);
-            changeLang.putExtra("dbslang","星展银行");
-            changeLang.putExtra("ocbclang","华侨银行");
-            changeLang.putExtra("uoblang","大华银行");
+        if(id == R.id.engLang){
+            Intent changeLang = new Intent(ChangeLangActivity.this, MainActivity.class);
+            changeLang.putExtra("dbslang","DBS");
+            changeLang.putExtra("ocbclang","OCBC");
+            changeLang.putExtra("uoblang","UOB");
             finish();
             startActivity(changeLang);
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item){
-        if(item.getTitle().equals("Website")){
-            if(getDBSTV.is)
-
-        }
-        return super.onContextItemSelected(item);
     }
 }

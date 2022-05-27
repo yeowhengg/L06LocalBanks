@@ -12,7 +12,6 @@
         android:id="@+id/tvDBS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DBS"
         android:layout_weight="33.3"
         android:gravity="center"/>
 
@@ -20,7 +19,6 @@
         android:id="@+id/tvOCBC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OCBC"
         android:layout_weight="33.3"
         android:gravity="center"/>
 
@@ -28,7 +26,6 @@
         android:id="@+id/tvUOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="UOB"
         android:layout_weight="33.3"
         android:gravity="center"/>
 </LinearLayout>

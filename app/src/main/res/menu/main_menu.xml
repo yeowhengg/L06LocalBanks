@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/langGroup">
+        <item
+            android:id="@+id/engLang"
+            android:orderInCategory="100"
+            android:title="English">
+        </item>
+
+        <item
+            android:id="@+id/chiLang"
+            android:orderInCategory="101"
+            android:title="Chinese">
+        </item>
+
+    </group>
+
+    <group android:id="@+id/bankGroup">
+        <item
+            android:id="@+id/itemWebsite"
+            android:title="Website" >
+        </item>
+
+        <item
+            android:id="@+id/itemContact"
+            android:title="Contact the bank">
+        </item>
+    </group>
+
+
+
+</menu>
