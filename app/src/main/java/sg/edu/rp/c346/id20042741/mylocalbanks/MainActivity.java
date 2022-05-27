@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     TextView getUOBTV;
     String getTVValue;
     String bank_num;
-    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(getDBSTV);
         registerForContextMenu(getOCBCTV);
         registerForContextMenu(getUOBTV);
-
     }
 
     @Override
@@ -88,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         String uri = String.format("https://www.%s.com", getTVValue);
         String bank_no = String.format("tel:+%s", bank_num);
 
-
         if (item.getTitle().equals(getString(R.string.website)) || item.getTitle().equals(getString(R.string.chi_web))) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             startActivity(intent);
@@ -99,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        //0xff000000 = black color
+        //0xffff0000 = red color
         if (item.getTitle().toString().equalsIgnoreCase(getString(R.string.eng_fav)) || item.getTitle().toString().equalsIgnoreCase(getString(R.string.chi_fav))) {
             if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_dbs)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_dbs))) && getDBSTV.getCurrentTextColor() == 0xff000000) { //0xffff0000
                 //Toast.makeText(MainActivity.this, String.format("%d", getDBSTV.getCurrentTextColor()),Toast.LENGTH_SHORT).show();
@@ -107,8 +106,9 @@ public class MainActivity extends AppCompatActivity {
             } else if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_ocbc)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_ocbc))) && getOCBCTV.getCurrentTextColor() == 0xff000000) {
                 getOCBCTV.setTextColor(Color.RED);
                 return true;
-            } else if (getTVValue.equalsIgnoreCase(getString(R.string.eng_uob)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_uob)) && getUOBTV.getCurrentTextColor() == 0xff000000) {
+            } else if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_uob)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_uob))) && getUOBTV.getCurrentTextColor() == 0xff000000) {
                 getUOBTV.setTextColor(Color.RED);
+                Toast.makeText(MainActivity.this, getTVValue, Toast.LENGTH_SHORT).show();
                 return true;
             } else {
                 if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_dbs)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_dbs))) && getDBSTV.getCurrentTextColor() == 0xffff0000) { //0xffff0000
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_ocbc)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_ocbc))) && getOCBCTV.getCurrentTextColor() == 0xffff0000) {
                     getOCBCTV.setTextColor(Color.BLACK);
                     return true;
-                } else if (getTVValue.equalsIgnoreCase(getString(R.string.eng_uob)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_uob)) && getUOBTV.getCurrentTextColor() == 0xffff0000) {
+                } else if ((getTVValue.equalsIgnoreCase(getString(R.string.eng_uob)) || getTVValue.equalsIgnoreCase(getString(R.string.chi_uob))) && getUOBTV.getCurrentTextColor() == 0xffff0000) {
                     getUOBTV.setTextColor(Color.BLACK);
                     return true;
                 }
