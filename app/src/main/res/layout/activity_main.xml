@@ -12,23 +12,26 @@
         android:id="@+id/tvDBS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DBS"
+        android:text="@string/dbs"
         android:layout_weight="33.3"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
 
     <TextView
         android:id="@+id/tvOCBC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OCBC"
+        android:text="@string/ocbc"
         android:layout_weight="33.3"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
 
     <TextView
         android:id="@+id/tvUOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="UOB"
+        android:text="@string/uob"
         android:layout_weight="33.3"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
 </LinearLayout>

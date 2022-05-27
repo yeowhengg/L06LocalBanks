@@ -5,13 +5,13 @@
         <item
             android:id="@+id/engLang"
             android:orderInCategory="100"
-            android:title="English">
+            android:title="@string/english">
         </item>
 
         <item
             android:id="@+id/chiLang"
             android:orderInCategory="101"
-            android:title="Chinese">
+            android:title="@string/chinese">
         </item>
 
     </group>
@@ -19,12 +19,13 @@
     <group android:id="@+id/bankGroup">
         <item
             android:id="@+id/itemWebsite"
-            android:title="Website" >
+            android:title="@string/website" >
         </item>
+
 
         <item
             android:id="@+id/itemContact"
-            android:title="Contact the bank">
+            android:title="@string/contact_the_bank">
         </item>
     </group>
 
